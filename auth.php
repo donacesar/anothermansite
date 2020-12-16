@@ -2,9 +2,9 @@
 	
 	require_once __DIR__ . '/functions.php';
 
-	$admin = auth($_POST['email'], $_POST['password']);
+	$admin = auth($_POST['login'], $_POST['password']);
 	if (false === $admin) {
-		header('Location: /login.php');
+		header('Location: login.php');
 		die;
 	}
 

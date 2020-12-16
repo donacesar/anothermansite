@@ -1,1 +1,4 @@
-hi
+<?php 
+
+	header("Location: admin.php");
+ ?>
