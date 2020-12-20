@@ -1,15 +1,13 @@
-<?php 
-	
-	require_once __DIR__ . '/functions.php';
+<?php
+require __DIR__ . '/autoload.php';
 
-	$admin = auth($_POST['login'], $_POST['password']);
-	if (false === $admin) {
-		header('Location: login.php');
-		die;
-	}
-
-	$adminSessionId = hash('sha256', microtime(true) . uniqid());
-	setcookie(COOCKIE_NAME, $adminSessionId);
-	saveAdminSession($admin, $adminSessionId);
-	header('Location: /admin.php');
- ?>
+$login = $_POST['login'];
+$password = $_POST['password'];
+$auth = new \Models\Auth($login, $password);
+$adminID = $auth->tryAuth();
+if (false === $adminID) {
+    header('Location: /login.php');
+    die;
+}
+$adminSession = new \Models\AdminSession($adminID);
+header('Location: /admin.php');

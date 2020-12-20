@@ -1,4 +1,4 @@
-<?php 
+<?php
+require __DIR__ . '/autoload.php';
 
-	header("Location: admin.php");
- ?>
+header("Location: admin.php");
