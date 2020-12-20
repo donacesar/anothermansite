@@ -30,6 +30,7 @@ if ($CurrentAdmin == null) {
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
+<div class="log-out"><a href="/logout.php"><p>Logout</p></a></div>
 <div>
     <h1>Админка</h1>
     <h2><?php echo $CurrentAdmin['login']; ?></h2>

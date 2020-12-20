@@ -5,7 +5,6 @@ namespace Models;
 class DB
 {
     protected $dbh;
-    protected $sth;
 
     public function __construct()
     {
@@ -13,17 +12,24 @@ class DB
         $this->dbh = new \PDO(DB_PATH, DB_LOGIN, DB_PASSWORD);
     }
 
-    public function query(string $sql, array $data)
+    public function execute($sql)
     {
-        $this->sth = $this->dbh->prepare($sql);
-        if ($this->sth == false) {
+        $sth = $this->dbh->prepare($sql);
+        $res = $sth->execute();
+        return $res;
+    }
+
+    public function query($sql, array $data)
+    {
+        $sth = $this->dbh->prepare($sql);
+        if ($sth == false) {
             return false;
         }
-        $this->sth->execute($data);
-        if ($this->sth == false) {
-            return false;
+        $res = $sth->execute($data);
+        if (false !== $res) {
+            return $sth->fetchAll();
         }
-        return $this->sth->fetchAll();
+        return [];
     }
 
 }

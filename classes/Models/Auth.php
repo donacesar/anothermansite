@@ -1,8 +1,7 @@
 <?php
 
-
 namespace Models;
-
+require __DIR__ . '/../../config.php';
 
 class Auth
 {

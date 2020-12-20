@@ -53,7 +53,7 @@ body, .login-submit, .login-submit:before, .login-submit:after {
 
 body {
     font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #404040;
+    color: white;
 }
 
 h1 {
@@ -249,5 +249,13 @@ label {
 
 .lt-ie9 .about {
     background: #313131;
+}
+
+.log-out {
+    color: white;
+    margin-top: 20px;
+    position: absolute;
+    right: 5em;
+    text-align: right;
 }
 

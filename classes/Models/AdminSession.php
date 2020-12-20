@@ -25,4 +25,5 @@ class AdminSession
         $data = [':admin_id' => $this->adminID, ':hash' => $this->adminSessionID];
         $db->query($sql, $data);
     }
+
 }
