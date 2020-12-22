@@ -4,9 +4,10 @@ namespace Models;
 
 class DB
 {
+    use \Singleton;
     protected $dbh;
 
-    public function __construct()
+    protected function __construct()
     {
         include __DIR__ . '/../../config.php';
         $this->dbh = new \PDO(DB_PATH, DB_LOGIN, DB_PASSWORD);

@@ -20,7 +20,7 @@ class Auth
             $this->wrongLog();
             return false;
         }
-        $db = new DB();
+        $db = DB::instance();
         $sql = 'SELECT * FROM admins WHERE login=:login';
         $params = [':login' => $this->login];
         $data = $db->query($sql, $params);

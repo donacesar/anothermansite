@@ -20,7 +20,7 @@ class AdminSession
 
     protected function saveAdminSession()
     {
-        $db = new DB();
+        $db = DB::instance();
         $sql = 'INSERT INTO admin_sessions (admin_id, hash) VALUES (:admin_id, :hash)';
         $data = [':admin_id' => $this->adminID, ':hash' => $this->adminSessionID];
         $db->query($sql, $data);
