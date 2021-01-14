@@ -1,10 +1,11 @@
 <?php
 
 
-namespace Models;
+namespace App\Models;
 
 
-class LogOut
+//Сбрасываем Куки
+class Logout
 {
     public function __construct()
     {

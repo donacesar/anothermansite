@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Models;
+namespace App\Models;
 
 
 class AdminSession
@@ -20,10 +20,9 @@ class AdminSession
 
     protected function saveAdminSession()
     {
-        $db = DB::instance();
+        $db = Db::instance();
         $sql = 'INSERT INTO admin_sessions (admin_id, hash) VALUES (:admin_id, :hash)';
         $data = [':admin_id' => $this->adminID, ':hash' => $this->adminSessionID];
         $db->query($sql, $data);
     }
-
 }

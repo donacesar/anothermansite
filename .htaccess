@@ -1,0 +1,29 @@
+# Разрешаем использование короткого синтаксиса
+php_value short_open_tag 1
+# Максимальный размер загружаемого файла
+php_value upload_max_filesize 10M
+# Максимальный размер данных, отправляемых методом POST
+php_value post_max_filesize 10M
+
+# Кодировка по умолчанию
+addDefaultCharset utf-8
+# Включаем механизм mod_rewrite
+RewriteEngine On
+# Если преобразованный запрос отличается от исходного RewriteBase восстановит его
+# сделав абсолютным. Запишет себя в запрос СЛЕВА
+# RewriteBase - путь от корня сайта до файла .htaccess
+RewriteBase /
+
+##RewriteRule ^$ index.php [QSA,L]
+
+
+# Если запрос не является файлом
+RewriteCond %{REQUEST_FILENAME} !-f
+# Если запрос не является дирректорией
+RewriteCond %{REQUEST_FILENAME} !-d
+# Если запрос не является ссылкой
+RewriteCond %{REQUEST_FILENAME} !-l
+# Меняет все на index.php
+# [QSA - Query String Append] Добавляет запрос к index.php
+RewriteRule ^(.*)$ index.php [QSA]
+

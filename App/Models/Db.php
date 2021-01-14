@@ -1,10 +1,12 @@
 <?php
 
-namespace Models;
+namespace App\Models;
 
-class DB
+use App\Singleton;
+
+class Db
 {
-    use \Singleton;
+    use Singleton;
     protected $dbh;
 
     protected function __construct()
@@ -32,5 +34,4 @@ class DB
         }
         return [];
     }
-
 }

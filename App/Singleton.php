@@ -1,6 +1,9 @@
 <?php
 
 
+namespace App;
+
+
 trait Singleton
 {
     protected static $instance;
@@ -14,7 +17,7 @@ trait Singleton
         if (null === self::$instance) {
             self::$instance = new self;
         }
+
         return self::$instance;
     }
-
 }

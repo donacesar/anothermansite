@@ -1,7 +1,7 @@
 <?php
 
-namespace Models;
-require __DIR__ . '/../../config.php';
+
+namespace App\Models;
 
 class Auth
 {
@@ -20,7 +20,7 @@ class Auth
             $this->wrongLog();
             return false;
         }
-        $db = DB::instance();
+        $db = Db::instance();
         $sql = 'SELECT * FROM admins WHERE login=:login';
         $params = [':login' => $this->login];
         $data = $db->query($sql, $params);
@@ -39,6 +39,7 @@ class Auth
     //логгирование неверного входа
     protected function wrongLog()
     {
+        include __DIR__ . '/../../config.php';
         $ip = $_SERVER['REMOTE_ADDR'];
         $date = date('[Y-m-d H:i:s]');
         $str =
@@ -52,10 +53,12 @@ class Auth
     //логгирование сессии администратора
     protected function adminLog()
     {
+        include __DIR__ . '/../../config.php';
         $ip = $_SERVER['REMOTE_ADDR'];
         $date = date('[Y-m-d H:i:s]');
         $str = '# ' . $ip . ' # ' . $this->login . ' #' . $date . PHP_EOL . PHP_EOL;
         file_put_contents(ADMIN_LOG, $str, FILE_APPEND | LOCK_EX);
     }
+
 
 }

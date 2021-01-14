@@ -12,11 +12,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=0.78">
     <title>Ошибка</title>
-    <link rel="stylesheet" href="css/style.css">
+    <style> <?php include __DIR__ . '/../../css/style.css'; ?></style>
     <link rel="icon" href="" type="image/x-icon">
     <link rel="shortcut icon" href="" type="image/x-icon">
     <!--[if lt IE 9]>
-    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="../../js/html5.js"></script><![endif]-->
 </head>
 <body>
 

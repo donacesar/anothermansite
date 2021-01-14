@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Models;
+namespace App\Models;
 
 
 class Admin
@@ -14,7 +14,7 @@ class Admin
         if (empty($this->hash)) {
             return null;
         }
-        $db = DB::instance();
+        $db = Db::instance();
         $sql = 'SELECT * FROM admin_sessions WHERE hash=:hash';
         $params = [':hash' => $this->hash];
         $data = $db->query($sql, $params);
@@ -23,7 +23,7 @@ class Admin
         }
 
         $data = $data[0];
-        $db = DB::instance();
+        $db = Db::instance();
         $sql = 'SELECT * FROM admins WHERE id=:id';
         $params = [':id' => $data['admin_id']];
         $arr = $db->query($sql, $params);

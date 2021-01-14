@@ -12,15 +12,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=0.78">
     <title>Login</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="" type="image/x-icon">
     <link rel="shortcut icon" href="" type="image/x-icon">
-    <!--[if lt IE 9]>
-    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
 
-<form method="post" action="/auth.php" class="login">
+<form method="post" action="?ctrl=Auth&action=Index" class="login">
     <p>
         <label for="login">Логин:</label>
         <input type="text" name="login" id="login" value="" autofocus>
