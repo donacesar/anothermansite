@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="" type="image/x-icon">
 </head>
 <body>
-<div class="log-out"><a href="?ctrl=Logout&action=Index"><p>Logout</p></a></div>
+<div class="log-out"><a href="?ctrl=Logout&action=Index">Logout</a></div>
 <div>
     <h1>Админка</h1>
     <h2><?php echo $CurrentAdmin['login']; ?></h2>

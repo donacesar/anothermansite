@@ -57,6 +57,7 @@ body {
 }
 
 h1 {
+    font-family: 'roboto', sans-serif;
     color: lightgray;
     margin-top: 50px;
     font-size: 40px;
@@ -239,3 +240,9 @@ label {
     background: #313131;
 }
 
+@media (max-width:767px){
+    h1{
+        font-size: 20px;
+        font-weight:900;
+    }
+}
