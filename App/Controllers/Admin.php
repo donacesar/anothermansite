@@ -15,6 +15,7 @@ class Admin extends Controller
         if ($CurrentAdmin == null) {
             header('Location: ?ctrl=Login&action=Index');
         }
+        $this->view->CurrentAdmin = $CurrentAdmin['login'];
         $this->view->display(__DIR__ . '/../templates/admin.php');
     }
 }

@@ -14,9 +14,12 @@
 html, body{
     height: 100%;
     font-family: 'Monserrat', sans-serif;
+    background-color: #575757;
 }
 /*Стили для демонстрации*/
 .wrapper{
+    background-color: #373737;
+    color: white;
 }
 
 /*Основные стили*/
@@ -119,6 +122,17 @@ html, body{
     opacity: 1;
 }
 
+.section{
+    margin-top: 140px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+.section > h1{
+    font-family: 'roboto', sans-serif;
+    letter-spacing: 2px;
+}
+
 @media (max-width:767px) {
     body.lock{
         overflow: hidden;
@@ -206,7 +220,6 @@ html, body{
     .header__menu > ul > li > a{
         font-size: 25px;
     }
-
 }
 
 
@@ -219,8 +232,10 @@ html, body{
     line-height: 25px;
 }
 .content__text p{
-    margin: 0 0 20px 0;
+    padding: 0 0 20px 0;
 }
+
+
 
 @media (max-width:767px){
     .content{

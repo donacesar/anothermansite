@@ -79,7 +79,7 @@ a {
     text-decoration: none;
 }
 a:hover {
-    text-decoration: underline;
+    color: white;
 }
 
 .login {
@@ -238,6 +238,20 @@ label {
 }
 .lt-ie9 .about {
     background: #313131;
+}
+
+.log-out{
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #0591ba;
+    border-radius: 10px;
+}
+
+.bb{
+    border: 2px solid red;
+
 }
 
 @media (max-width:767px){

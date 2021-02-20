@@ -13,16 +13,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.78">
 
     <title>Admin</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style2.css">
     <link rel="icon" href="" type="image/x-icon">
     <link rel="shortcut icon" href="" type="image/x-icon">
 </head>
 <body>
-<div class="log-out"><a href="?ctrl=Logout&action=Index">Logout</a></div>
-<div>
-    <h1>Админка</h1>
-    <h2><?php echo $CurrentAdmin['login']; ?></h2>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <div class="header__body">
+                <a href="?ctrl=Admin&action=Index" class="header__logo">
+                    <img src="/img/logo.png" alt="" >
+                </a>
+
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li><a href="" class="header__link">Новости</a>
+                        </li>
+                        <li>
+                            <a href="" class="header__link">Фото</a>
+                        </li>
+                        <li>
+                            <a href="" class="header__link">Видео</a>
+                        </li>
+                        <li>
+                            <a href="" class="header__link">Музыка</a>
+                        </li>
+                        <li>
+                            <a href="?ctrl=Admin&action=Index" class="header__link">Админ</a>
+                        </li>
+                        <li>
+                            <a href="?ctrl=Logout&action=Index" class="header__link"><?php echo $CurrentAdmin . ':'; ?>Logout</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+    </header>
+    <section class="section">
+        <h1>Панель Админки</h1>
+
+    </section>
 </div>
+<!--подключаем jQuery-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<!--Подключаем файл JS-->
+<script src="/js/script.js"></script>
 
 </body>
 </html>
