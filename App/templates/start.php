@@ -16,11 +16,13 @@
     <link rel="icon" href="" type="image/x-icon">
     <link rel="shortcut icon" href="" type="image/x-icon">
     <!--[if lt IE 9]>
-    <script src="../../js/html5.js"></script><![endif]-->
+    <script src="/js/html5.js"></script><![endif]-->
 </head>
 <body>
 
 <h1>Стартовая страница</h1>
+
+<a href="/anothermansite?ctrl=Test&action=Index">Шаблон страницы</a>
 
 </body>
 </html>

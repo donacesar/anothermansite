@@ -40,4 +40,6 @@ class Admin
         $str = '# ' . $ip . ' # ' . $login . ' #' . $date . PHP_EOL . PHP_EOL;
         file_put_contents(ADMIN_LOG, $str, FILE_APPEND | LOCK_EX);
     }
+
+
 }
