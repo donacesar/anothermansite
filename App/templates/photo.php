@@ -7,7 +7,7 @@
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
     <link rel="stylesheet" href="/css/style2.css">
-    <title>НОВОСТИ</title>
+    <title>ФОТО</title>
     <link rel="icon" href="/favicon.png" type="image/x-icon">
 </head>
 <body>
@@ -24,10 +24,10 @@
                 </div>
                 <nav class="header__menu">
                     <ul class="header__list">
-                        <li><a href="/" class="header__link menu__active">Новости</a>
+                        <li><a href="/" class="header__link">Новости</a>
                         </li>
                         <li>
-                            <a href="?ctrl=Photo&action=Index" class="header__link">Фото</a>
+                            <a href="?ctrl=Photo&action=Index" class="header__link menu__active">Фото</a>
                         </li>
                         <li>
                             <a href="?ctrl=Video&action=Index" class="header__link">Видео</a>
@@ -49,22 +49,8 @@
     <div class="content">
         <div class="container">
 
-            <div class="page__header"><h1>Новости</h1></div>
+            <div class="page__header"><h1>Фото</h1></div>
 
-            <div class="content__text">
-                <h3>Новость номер 1.</h3>
-                <p>
-                    Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Которой грустный агентство, всемогущая, на берегу текста своих не точках свое даль что пунктуация его ты снова власти бросил коварных за.
-                </p>
-
-            </div>
-            <div class="content__text">
-                <h3>Новость номер 2.</h3>
-                <p>
-                    Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Но рыбного lorem реторический за вскоре которое пор скатился она подпоясал текстов залетают, запятой! Если, свою вершину составитель послушавшись моей строчка безорфографичный своих предупреждал. Несколько но ведущими эта lorem это, буквенных бросил она дороге текст строчка власти если последний грамматики обеспечивает снова речью знаках. Она жаренные буквенных страну, журчит единственное!
-                </p>
-
-            </div>
         </div>
 
     </div>
